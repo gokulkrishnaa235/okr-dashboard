@@ -13,12 +13,10 @@ const Modal = ({ header, children, updateModalState }) => {
     const handleOverlayClick = (event) => {
       if (!(modalRef.current && modalRef.current.contains(event.target))) {
         updateModalState();
-        appElement.removeAttribute("aria-hidden");
         window.removeEventListener("click", handleOverlayClick);
       }
     };
 
-    appElement.setAttribute("aria-hidden", "true");
     window.addEventListener("click", handleOverlayClick);
 
     return () => {

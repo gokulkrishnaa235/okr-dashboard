@@ -1,5 +1,14 @@
-Steps to run the application
 
-1.git clone ${clone url}
-2.npm install
-3.npm start
+
+**Steps to run the application**
+
+```
+git clone https://github.com/gokulkrishnaa235/okr-dashboard.git
+```
+
+```
+npm install
+```
+```
+npm run start
+```

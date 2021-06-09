@@ -1,0 +1,26 @@
+.child-container {
+  display: flex;
+  padding: 16px;
+  border-left: 1px solid gray;
+}
+
+.child-container::before {
+  content: '__';
+    margin-left: -16px;
+    margin-top: -5px;
+    color: gray;
+}
+
+
+.child-content {
+  list-style-type: lower-alpha;
+  margin-left: 40px;
+  margin-top: 2px;
+}
+
+.avatar {
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid #cccccc;
+}
+

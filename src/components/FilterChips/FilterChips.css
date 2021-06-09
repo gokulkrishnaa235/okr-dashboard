@@ -1,0 +1,55 @@
+.chip-container {
+  display: grid;
+  grid-row-gap: 16px;
+  grid-column-gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.filter-text {
+  text-align: center;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+.chips {
+  border-radius: 50px;
+  border: 1px solid gray;
+  color: gray;
+  width: 200px;
+  height: auto;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #13ce95;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 992px) {
+  .chip-container {
+    grid-row-gap: 12px;
+    grid-column-gap: 12px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .chips {
+    width: 120px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .chip-container {
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .chips {
+    width: 80px;
+    font-size: 12px;
+  }
+}

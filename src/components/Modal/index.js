@@ -4,7 +4,6 @@ import "./Modal.css";
 import closeIcon from "../../assets/close.svg";
 import PropTypes from "prop-types";
 
-const appElement = document.getElementById("root");
 
 const Modal = ({ header, children, updateModalState }) => {
   const modalRef = useRef(null);
@@ -13,14 +12,11 @@ const Modal = ({ header, children, updateModalState }) => {
     const handleOverlayClick = (event) => {
       if (!(modalRef.current && modalRef.current.contains(event.target))) {
         updateModalState();
-        window.removeEventListener("click", handleOverlayClick);
       }
     };
-
     window.addEventListener("click", handleOverlayClick);
 
     return () => {
-      appElement.removeAttribute("aria-hidden");
       window.removeEventListener("click", handleOverlayClick);
     };
   }, [updateModalState]);
